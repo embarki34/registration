@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Registration",
+  title: "Infinity Club Registration",
   description: "Join our community and unlock amazing opportunities",
 };
 
