@@ -38,6 +38,17 @@ const Hero: React.FC = () => {
         </li>
       </ul>
       <p className="text-sm italic text-gray-600 dark:text-gray-400 text-center">Register now and start your journey with us!</p>
+      <p className="text-sm text-gray-600 dark:text-gray-400 text-center mt-4">
+        Developed by{' '}
+        <a
+          href="https://portfolio-omar-embarkis-projects.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-green-400 hover:text-green-500 transition-colors duration-300"
+        >
+          Embarki Omar
+        </a>
+      </p>
     </div>
   );
 };
