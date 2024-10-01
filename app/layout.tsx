@@ -17,7 +17,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Infinity Club Registration",
-  description: "Join our community and unlock amazing opportunities",
+  description: "Infinity Club: Exclusive community for BBA students. Join now to unlock networking, career opportunities, and professional growth. fmi bba club, Optimize your BBA journey with us.",
 };
 
 export default function RootLayout({
