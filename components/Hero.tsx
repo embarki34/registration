@@ -1,11 +1,12 @@
 import React from 'react';
+import Countdown from './Countdown';
 
 const Hero: React.FC = () => {
   return (
-    <div className="flex flex-col justify-center h-full relative">
-      <div className="mb-6 flex justify-center">
+    <div className="flex flex-col justify-center h-full relative space-y-8">
+      <div className="flex justify-center">
         <svg
-          className="w-32 h-32 text-green-500 dark:text-green-400"
+          className="w-24 h-24 md:w-32 md:h-32 text-green-500 dark:text-green-400"
           viewBox="0 0 1080 1080"
           fill="currentColor"
         >
@@ -15,40 +16,39 @@ const Hero: React.FC = () => {
           h-45.17c0,0-27.33,67.77-73.9,82.83h153.2L928,528.92L705.89,336.92z"/>
         </svg>
       </div>
-      <h1 className="text-5xl font-bold mb-6 text-gray-800 dark:text-gray-100 text-center">Welcome to Our Community</h1>
-      <p className="text-xl mb-8 text-gray-600 dark:text-gray-300 text-center">Join us and unlock amazing opportunities!</p>
-      <ul className="space-y-2 mb-8 text-gray-700 dark:text-gray-300">
-        <li className="flex items-center">
-          <svg className="w-5 h-5 mr-2 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-          </svg>
-          Access to exclusive events
-        </li>
-        <li className="flex items-center">
-          <svg className="w-5 h-5 mr-2 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-          </svg>
-          Networking opportunities
-        </li>
-        <li className="flex items-center">
-          <svg className="w-5 h-5 mr-2 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-          </svg>
-          Professional development resources
-        </li>
+      
+      <div className="text-center space-y-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100">Welcome to Our Community</h1>
+        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300">Join us and unlock amazing opportunities!</p>
+      </div>
+      
+      <ul className="space-y-3 text-gray-700 dark:text-gray-300 max-w-md mx-auto">
+        {['Access to exclusive events', 'Networking opportunities', 'Professional development resources'].map((item, index) => (
+          <li key={index} className="flex items-center">
+            <svg className="w-5 h-5 mr-3 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            {item}
+          </li>
+        ))}
       </ul>
-      <p className="text-sm italic text-gray-600 dark:text-gray-400 text-center">Register now and start your journey with us!</p>
-      <p className="text-sm text-gray-600 dark:text-gray-400 text-center mt-4">
-        Developed by{' '}
-        <a
-          href="https://portfolio-omar-embarkis-projects.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-green-400 hover:text-green-500 transition-colors duration-300"
-        >
-          Embarki Omar
-        </a>
-      </p>
+      
+      <Countdown />
+      
+      <div className="text-center space-y-4">
+        <p className="text-sm italic text-gray-600 dark:text-gray-400">Register now and start your journey with us!</p>
+        <p className="text-sm text-gray-600 dark:text-gray-400">
+          Developed by{' '}
+          <a
+            href="https://portfolio-omar-embarkis-projects.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-400 hover:text-green-500 transition-colors duration-300"
+          >
+            Embarki Omar
+          </a>
+        </p>
+      </div>
     </div>
   );
 };
