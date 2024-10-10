@@ -1,11 +1,10 @@
 "use client"
 import React, { useEffect } from 'react';
 import Link from 'next/link';
-import { useTheme } from 'next-themes';
+
 import { motion, useAnimation } from 'framer-motion';
 
 const Hero: React.FC = () => {
-  const { theme } = useTheme();
   const controls = useAnimation();
 
   useEffect(() => {
