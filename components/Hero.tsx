@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={controls}
-      className={`${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'} min-h-screen flex flex-col justify-center items-center text-center p-8 transition-colors duration-200`}
+      className="bg-gray-900 text-white min-h-screen flex flex-col justify-center items-center text-center p-8"
     >
       <motion.div 
         className="w-48 h-48 mb-8"
