@@ -1,7 +1,12 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 
-const Countdown: React.FC = () => {
+interface CountdownProps {
+  targetDate: Date;
+  onFinish: () => void; // Add this prop
+}
+
+const Countdown: React.FC<CountdownProps> = ({ targetDate, onFinish }) => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -10,15 +15,14 @@ const Countdown: React.FC = () => {
   });
 
   useEffect(() => {
-    const countdownDate = new Date('2024-10-11T00:01:00').getTime(); // Changed to a future date
-
     const timer = setInterval(() => {
       const now = new Date().getTime();
-      const distance = countdownDate - now;
+      const distance = targetDate.getTime() - now;
 
       if (distance < 0) {
         clearInterval(timer);
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        onFinish(); // Call the onFinish prop when countdown ends
       } else {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
@@ -30,7 +34,7 @@ const Countdown: React.FC = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [targetDate, onFinish]);
 
   return (
     <div className="text-center mt-8">
