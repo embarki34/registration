@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="0 0 1080 1080" style={{enableBackground: 'new 0 0 1080 1080'} as React.CSSProperties} xmlSpace="preserve">
           <style type="text/css">
-            {`.st0{fill:#A8D78F;}`}
+            {`.st0{fill:#5edb5a;}`}
           </style>
           <path className="st0" d="M705.89,336.92c0,0-197.29-15.33-211.29,185.35c-0.36,5.13-0.51,10.26-0.55,15.4
           c-0.14,17.54-5.05,93.15-78.03,123l-128-109.17l139.29-128h22.59c0,0,22.59-45.24,77.17-86.62H396.46L152.5,555.27L382.14,743.5
